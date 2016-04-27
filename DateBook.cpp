@@ -277,13 +277,12 @@ void DateBook::MainMenu()
 {
     cout<<"Main Menu"<<endl;
     cout<<"1. Insert Event"<<endl;
-    cout<<"2. Edit Event"<<endl;
-    cout<<"3. Delete Event"<<endl;
-    cout<<"4. Search By Date"<<endl;
-    cout<<"5. Print Contents"<<endl;
-    cout<<"6. Search By Keyword"<<endl;
-    cout<<"7. Delete All"<<endl;
-    cout<<"8. Quit"<<endl;
+    cout<<"2. Delete Event"<<endl;
+    cout<<"3. Search By Date"<<endl;
+    cout<<"4. Print Contents"<<endl;
+    cout<<"5. Search By Keyword"<<endl;
+    cout<<"6. Delete All"<<endl;
+    cout<<"7. Quit"<<endl;
 
 }
 
