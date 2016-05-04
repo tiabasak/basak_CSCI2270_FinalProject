@@ -194,7 +194,7 @@ void DateBook::SearchByKey(string keyword)
                     {
                         cout<<"Keyword Not found"<<endl;
                     }
-                    if(found)
+                    if(!found)
                     {
                         print(temp);
                     }
