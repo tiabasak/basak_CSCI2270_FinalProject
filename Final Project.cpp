@@ -1,18 +1,22 @@
 #include <iostream>
 #include <string>
 #include "DateBook.h"
-#include "DateBook.cpp"
+#include <stdlib.h>
+//#include "DateBook.cpp"
 
 using namespace std;
 
 int main()
 {
     DateBook Obj;
-    int choice = 0;
+    string schoice;
+    int choice;
+    bool truth;
     while(choice != 7)
     {
         Obj.MainMenu();
-        cin>>choice;
+        getline (cin,schoice);
+        choice = atoi(schoice.c_str());
 
         if(choice == 1)
         {
@@ -21,8 +25,18 @@ int main()
             string event;
 
             cout<<"Enter Month"<<endl;
-            cin.ignore(1,'\n');
             getline(cin,month);
+            if (Obj.hashAssign(month)==-1)
+            {
+                truth = true;
+                while (truth)
+                {
+                    cout<<"Please enter an acceptable month"<<endl;
+                    getline(cin,month);
+                    if (Obj.hashAssign(month)!=-1)
+                        truth = false;
+                }
+            }
 
             cout<<"Enter Date"<<endl;
             cin>>date;
@@ -30,6 +44,7 @@ int main()
             cout<<"Enter Event"<<endl;
             cin.ignore(1,'\n');
             getline(cin,event);
+
 
             Obj.insertdate(month,date,event);
         }
@@ -40,8 +55,18 @@ int main()
 
 
             cout<<"Enter Month"<<endl;
-            cin.ignore(1,'\n');
             getline(cin,month);
+            if (Obj.hashAssign(month)==-1)
+            {
+                truth = true;
+                while (truth)
+                {
+                    cout<<"Please enter an acceptable month"<<endl;
+                    getline(cin,month);
+                    if (Obj.hashAssign(month)!=-1)
+                        truth = false;
+                }
+            }
 
             cout<<"Enter Date"<<endl;
             cin>>date;

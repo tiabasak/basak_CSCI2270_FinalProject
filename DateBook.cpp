@@ -16,57 +16,58 @@ DateBook::DateBook()
 int DateBook::hashAssign(string x)
 {
     int index;
-    if(x == "January")
+    if(x == "January" || x == "january")
     {
         index = 0;
     }
-    else if(x == "February")
+    else if(x == "February" || x =="february")
     {
         index = 1;
     }
-     else if(x == "March")
+     else if(x == "March" || x =="march")
     {
         index = 2;
     }
-     else if(x == "April")
+     else if(x == "April" ||x == "april")
     {
         index = 3;
     }
-     else if(x == "May")
+     else if(x == "May" || x =="may")
     {
         index = 4;
     }
-     else if(x == "June")
+     else if(x == "June" || x =="june")
     {
         index = 5;
     }
-     else if(x == "July")
+     else if(x == "July" || x =="july")
     {
         index = 6;
     }
-     else if(x == "August")
+     else if(x == "August" || x =="august")
     {
         index = 7;
     }
-     else if(x == "September")
+     else if(x == "September" ||x == "september")
     {
         index = 8;
     }
-     else if(x == "October")
+     else if(x == "October" ||x == "october")
     {
         index = 9;
     }
-     else if(x == "November")
+     else if(x == "November" || x =="november")
     {
         index = 10;
     }
-     else if(x == "December")
+     else if(x == "December" || x =="december")
     {
         index = 11;
     }
      else
     {
-        cout<<x<<" Not Found"<<endl;
+        cout<<x<<" Not Found"<<endl;                //Added a loop back to the top
+        return -1;
     }
     return index;
 };

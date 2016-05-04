@@ -37,10 +37,10 @@ class DateBook
         void MainMenu();
         void Edit(std::string month, int date);
         void upcoming(std::string month,int date);
+        int hashAssign(std::string x);
         bool checkTable();
     protected:
     private:
-        int hashAssign(std::string x);
         int tableSize = 12;
         DateElem* hashTable[12];
 };
